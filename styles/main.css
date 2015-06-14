@@ -8,14 +8,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 
 body {
-  background: #fafafa;
+  background: #000;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   width: 100%;
 }
 
 a.title {
-  color: #fff;  
+  color: #fff;
 }
 
 paper-fab {
@@ -41,7 +41,7 @@ paper-toast {
 }
 
 .rules-page {
-  background-color: #fff;
+  background-color: #000;
   height: 100%;
 }
 
@@ -60,4 +60,55 @@ paper-toast {
 
 .a-no-style:* {
   text-decoration: none;
+}
+
+paper-item.last {
+  border-bottom: 0px solid;
+}
+
+paper-item {
+  border-bottom: 1px solid #F3F3F3;
+}
+
+paper-button {
+  background-color: #b69369;
+  color: #fff !important;
+}
+paper-button a {
+  color: #fff !important;
+}
+
+
+paper-toast {
+  background-color: #e25a33;
+  color: #fff !important;
+}
+
+#middleBar #containerImgTop.middle {
+  margin: 0px auto;
+  margin-top: 25px;
+}
+
+.dialog {
+  color: white;
+  padding: 0px 25px;
+}
+.dialog p, .dialog h2 {
+  text-align: center;
+}
+
+#shareTextarea {
+  width: 100%;
+}
+
+paper-dialog#new-event-alert {
+  color: #fff;
+}
+
+paper-tabs {
+  color: #fff;
+}
+
+.eventi-tabs {
+  margin-top: 20px;
 }

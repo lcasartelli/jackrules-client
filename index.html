@@ -61,7 +61,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
 
-    <paper-header-panel main mode="waterfall-tall">
+    <paper-header-panel main mode="standard">
 
       <paper-toolbar id="mainToolbar">
 
@@ -70,9 +70,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-icon-button icon="search"></paper-icon-button> -->
 
         <!-- Application name -->
-          <div class="middle">
+          <div id="containerImgTop" class="middle">
             <a href='/' data-router='home' class='title a-no-style paper-font-display2 app-name'>
-              <img src='/images/logo.png' style='width: 150px' />
+              <img src='/images/logo.png' style='width: 180px' />
             </a>
           </div>
       </paper-toolbar>
@@ -83,15 +83,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <!-- Main Content -->
 
           <div class='jd-exp'>
-
-            <paper-button raised>
-              <a href='/jack-rules' class='a-no-style'>Attiva Jack Rules</a>
-            </paper-button>
-
+            <a href='/jack-rules' class='a-no-style'>
+              <paper-button raised>
+                Attiva Jack Rules
+              </paper-button>
+            </a>
           </div>
 
           <paper-material elevation="1">
-            <my-list></my-list>
+            <paper-item>
+                <paper-item-body two-line>
+                  <div>H-ACK Beverage</div>
+                  <div secondary style='color: #4CAF50;'>In corso</div>
+                </paper-item-body>
+                <!-- <paper-ripple animating></paper-ripple> -->
+            </paper-item>
+            <paper-item>
+                <paper-item-body two-line>
+                  <div>Alter Ego Caffè - Milano</div>
+                  <div secondary>18/06/2015 alle 21:30</div>
+                </paper-item-body>
+                <!-- <paper-ripple animating></paper-ripple> -->
+            </paper-item>
+            <paper-item class='last'>
+                <paper-item-body two-line>
+                  <div>Arci Ohibò - Milano</div>
+                  <div secondary>22/06/2015 alle 21:00</div>
+                </paper-item-body>
+                <!-- <paper-ripple animating></paper-ripple> -->
+            </paper-item>
           </paper-material>
 
           <div class="">
@@ -116,66 +136,95 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div>
 
             <paper-material elevation="1">
-              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
+              <paper-item>
+                <paper-checkbox>
                 <paper-item-body two-line>
                     <div>Amici Università</div>
                     <div secondary>Your status is visible to everyone</div>
                 </paper-item-body>
+              </paper-checkbox>
                 <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
-              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
-                <paper-item-body two-line>
-                    <div>Colleghi</div>
-                    <div secondary>Your status is visible to everyone</div>
-                </paper-item-body>
+              <paper-item>
+                <paper-checkbox>
+                  <paper-item-body two-line>
+                      <div>Colleghi</div>
+                      <div secondary>Your status is visible to everyone</div>
+                  </paper-item-body>
+                </paper-checkbox>
                 <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
-              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
-
+              <paper-item>
+                  <paper-checkbox>
                     <div>Simone Lusenti</div>
-
+                  </paper-checkbox>
                   <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
-              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
-
-                    <div>Emanuele Brivio</div>
-
-                  <!-- <paper-ripple animating></paper-ripple> -->
+              <paper-item class='last'>
+                <paper-checkbox>
+                  <div>Simone Lusenti</div>
+                </paper-checkbox>
               </paper-item>
-
-
-
             </paper-material>
+
+            <div style='text-align: center;'>
+              <a href='/' class='a-no-style'>
+                <paper-button class='jack' onclick="window.mySocket.emit('addEvent', { data: 'hello' });" raised>JACK!</paper-button>
+              </a>
+            </div>
 
           </div>
       </div>
 
 
       <div data-route="jack-rules" class='rules-page'>
+        <div class='jd-exp'>
 
+          <paper-button raised>
+            <a href='/end-jack-rules' class='a-no-style'>Termina Jack Rules</a>
+          </paper-button>
+
+        </div>
         <img src='/images/JD_20620_ip5.png' class='bottles'/>
 
 
-        <paper-dialog
-          id='dialog'
+        <div
+          id='dialog' class='dialog'
           entry-animation="scale-up-animation"
-          exit-animation="fade-out-animation">
+          exit-animation="fade-out-animation"
+          >
 
           <h2>Attenzione</h2>
-          <p>Il tuo cellulare verrà messo in silezioso</p>
+          <p>Il tuo cellulare verrà messo in silenzioso</p>
 
-          <div class="buttons">
+          <!--<div class="buttons">
             <paper-button dialog-confirm>Yeah!</paper-button>
-          </div>
+          </div>-->
 
-        </paper-dialog>
+        </div>
 
         <script>
           setTimeout(function () {
-            document.querySelector('#dialog').open(function () {});
+            // document.querySelector('#dialog').open(function () {});
           }, 2000);
 
         </script>
+
+      </div>
+
+      <div data-route="end-jack-rules" class='rules-page'>
+        <div class='dialog'>
+
+          <h2>Condividi la tua esperienza Jack!</h2>
+          <textarea id="shareTextarea" rows="4"></textarea>
+          <a href='/' class='a-no-style'>
+            <div class="buttons" style='text-align:right'>
+              <paper-button dialog-confirm>Pubblica!</paper-button>
+            </div>
+          </a>
+
+        </div>
+        <img src='/images/JD_20620_ip5.png' class='bottles'/>
 
       </div>
 

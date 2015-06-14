@@ -10,58 +10,83 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="my-eventi">
   <style>
+    paper-material {
+      background-color: #fff;
+    }
+
+    paper-material {
+      width: calc(97.33% - 32px);
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    .list-item-eventi img {
+      float: left;
+    }
+    .list-item-eventi div {
+      float: left;
+      margin-right: 100px;
+    }
+    .eventi-container {
+      margin-top: 20px;
+    }
 
   </style>
   <template>
 
-    <paper-tabs selected="{{eventSelected}}">
+    <paper-tabs selected="{{eventSelected}}" class='eventi-tabs'>
       <paper-tab>Eventi Jack Daniel's</paper-tab>
       <paper-tab>Eventi privati</paper-tab>
     </paper-tabs>
 
-    <iron-pages selected="{{eventSelected}}">
-      <div>
-        <paper-material elevation="1">
-          <paper-item>
-              <paper-item-body two-line>
-                <a data-router='friends' href='/friends' class='a-no-style'>
-                  <div>Yo motherfucker!</div>
-                  <div secondary>Your status is visible to everyone</div>
-                </a>
-              </paper-item-body>
-              <!-- <paper-ripple animating></paper-ripple> -->
-          </paper-item>
-          <paper-item>
-              <paper-item-body two-line>
-                <a data-router='friends' href='/friends' class='a-no-style'>
-                  <div>Yo motherfucker!</div>
-                  <div secondary>Your status is visible to everyone</div>
-                </a>
-              </paper-item-body>
-              <!-- <paper-ripple animating></paper-ripple> -->
-          </paper-item>
-          <paper-item>
-              <paper-item-body two-line>
-                <a data-router='friends' href='/friends' class='a-no-style'>
-                  <div>Yo motherfucker!</div>
-                  <div secondary>Your status is visible to everyone</div>
-                </a>
-              </paper-item-body>
-              <!-- <paper-ripple animating></paper-ripple> -->
-          </paper-item>
-          <paper-item>
-              <paper-item-body two-line>
-                <a data-router='friends' href='/friends' class='a-no-style'>
-                  <div>Yo motherfucker!</div>
-                  <div secondary>Your status is visible to everyone</div>
-                </a>
-              </paper-item-body>
-              <!-- <paper-ripple animating></paper-ripple> -->
-          </paper-item>
-        </paper-material>
+    <iron-pages selected="{{eventSelected}}" class='eventi-container'>
 
-      </div>
-      <div>Heidi top poser</div>
+      <paper-material elevation="1">
+        <paper-item>
+            <paper-item-body two-line>
+              <a data-router='friends' href='/friends' class='a-no-style list-item-eventi'>
+                <img src='/images/e1.png'style='width: 50px;' />
+                <div>H-ACK Beverage</div>
+                <div secondary>H-ACK is the hackathon designed by H-FARM for industries. It is a 24-hour marathon of pure creative energy, where designers, developers and marketing specialists develop innovative projects mixing the unique know how of traditional Made in Italy excellences with the digital world.</div>
+                <small class='data'>
+                  <span>14/06/2015</span>
+                  <span>9:00</span>
+                </small>
+              </a>
+            </paper-item-body>
+            <!-- <paper-ripple animating></paper-ripple> -->
+        </paper-item>
+        <paper-item>
+            <paper-item-body two-line>
+              <a data-router='friends' href='/friends' class='a-no-style'>
+                <img src='/images/e2.png'style='width: 50px;' />
+                <div>Marilyn Manson – “The Pale Emperor tour”</div>
+                <div secondary>In concomitanza con l’uscita del nuovo album “The Pale Emperor” (Cooking Vinyl), il “reverendo” Marilyn Manson17.06.2015  annuncia e conferma il tour europeo che lo porterà anche in Italia per un’unica data programmata il 17 giugno prossimo all’Alcatraz di Milano. Un’occasione da non perdere, per rivedere dal vivo uno dei personaggi più controversi della scena rock americana. Sarà presente uno special guest che annunceremo appena possibile.</div>
+                <small class='data'>
+                  <span>17/06/2015</span>
+                  <span>19:00</span>
+                </small>
+              </a>
+            </paper-item-body>
+            <!-- <paper-ripple animating></paper-ripple> -->
+        </paper-item>
+        <paper-item>
+            <paper-item-body two-line>
+              <a data-router='friends' href='/friends' class='a-no-style'>
+                <img src='/images/e3.png'style='width: 50px;' />
+                <div>MEG BLUEZ BAND</div>
+                <div secondary>La passione per la musica, i colori e le atmosfere tipiche del blues..... ...la voglia di proporre un progetto in cui mescolare i gusti e le influenze ed allo stesso tempo riscoprire e rielaborare sonorità old style ... da qui nasce la MEG BLUEZ BAND!</div>
+                <small class='data'>
+                  <span>19/06/2015</span>
+                  <span>23:00</span>
+                </small>
+              </a>
+            </paper-item-body>
+            <!-- <paper-ripple animating></paper-ripple> -->
+        </paper-item>
+      </paper-material>
+
+      <div id='singoli'></div>
 
     </iron-pages>
 
