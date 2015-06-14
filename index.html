@@ -165,7 +165,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <div style='text-align: center;'>
               <a href='/' class='a-no-style'>
-                <paper-button class='jack' onclick="window.mySocket.emit('addEvent', { data: 'Sei stato invitato a ' + app.eventTitle });" raised>JACK!</paper-button>
+                <paper-button class='jack' onclick="_jack()" raised>JACK!</paper-button>
               </a>
             </div>
 
@@ -212,7 +212,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div data-route="end-jack-rules" class='rules-page'>
         <div class='dialog'>
 
-          <h2>Condividi la tua esperienza Jack!</h2>
+          <h2>Condividi la tua esperienza JACK!</h2>
           <textarea id="shareTextarea" rows="4"></textarea>
           <a href='/' class='a-no-style'>
             <div class="buttons" style='text-align:right; padding-top: 20px;'>
@@ -254,6 +254,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script src="scripts/app.js"></script>
+  <script type='text/javascript'>
+    function _jack() {
+      document.querySelectorAll('input[type=checkbox]').selected('false');
+      window.mySocket.emit('addEvent', { data: 'Sei stato invitato a ' + app.eventTitle });
+    }
+  </script>
 
 </body>
 
