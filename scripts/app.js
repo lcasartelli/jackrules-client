@@ -30,7 +30,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // imports are loaded and elements have been registered
 
     var socket = io('http://localhost:8080');
-    socket.emit('addEvent', { data: 'new event!' });
+    // socket.emit('addEvent', { data: 'new event!' });
     socket.on('addEvent', function (data) {
       console.log(data);
       var alert = document.querySelector('#new-event-alert');
