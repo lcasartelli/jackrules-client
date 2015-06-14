@@ -58,55 +58,67 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <iron-pages selected="{{eventSelected}}" class='eventi-container'>
 
-      <paper-material elevation="1">
-        <paper-item class='eventi-item-composed'>
-            <paper-item-body two-line class='container'>
-              <a data-router='friends' href='/friends' class='a-no-style list-item-eventi'>
-                <img src='/images/e1.png' />
-                <div class='item-title'>H-ACK Beverage</div>
-                <div secondary>H-ACK is the hackathon designed by H-FARM for industries. It is a 24-hour...</div>
-                <small class='data'>
-                  <span>14/06/2015</span>
-                  <span>9:00</span>
-                </small>
-              </a>
-            </paper-item-body>
-            <!-- <paper-ripple animating></paper-ripple> -->
-        </paper-item>
-        <paper-item class='eventi-item-composed'>
-            <paper-item-body two-line class='container'>
-              <a data-router='friends' href='/friends' class='a-no-style'>
-                <img src='/images/e2.jpg' />
-                <div class='item-title'>Marilyn Manson – “The Pale Emperor tour”</div>
-                <div secondary>In concomitanza con l’uscita del nuovo album “The Pale Emperor” (Cooking Vinyl)...</div>
-                <small class='data'>
-                  <span>17/06/2015</span>
-                  <span>19:00</span>
-                </small>
-              </a>
-            </paper-item-body>
-            <!-- <paper-ripple animating></paper-ripple> -->
-        </paper-item>
-        <paper-item class='eventi-item-composed'>
-            <paper-item-body two-line class='container'>
-              <a data-router='friends' href='/friends' class='a-no-style'>
-                <img src='/images/e3.jpg' />
-                <div class='item-title'>MEG BLUEZ BAND</div>
-                <div secondary>La passione per la musica, i colori e le atmosfere tipiche del blues...</div>
-                <small class='data'>
-                  <span>19/06/2015</span>
-                  <span>23:00</span>
-                </small>
-              </a>
-            </paper-item-body>
-            <!-- <paper-ripple animating></paper-ripple> -->
-        </paper-item>
-      </paper-material>
+      <div>
+        <p style='text-align: center; color: #fff;'>Scegli un evento e invia un JACK</p>
+
+        <paper-material elevation="1">
+          <paper-item class='eventi-item-composed'>
+              <paper-item-body two-line class='container'>
+                <a data-router='friends' href='/friends' class='a-no-style list-item-eventi'>
+                  <img src='/images/e1.png' />
+                  <div class='item-title'>H-ACK Beverage</div>
+                  <div secondary>H-ACK is the hackathon designed by H-FARM for industries. It is a 24-hour...</div>
+                  <small class='data'>
+                    <span>14/06/2015</span>
+                    <span>9:00</span>
+                  </small>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+          <paper-item class='eventi-item-composed'>
+              <paper-item-body two-line class='container'>
+                <a data-router='friends' href='/friends' class='a-no-style'>
+                  <img src='/images/e2.jpg' />
+                  <div class='item-title'>Marilyn Manson – “The Pale Emperor tour”</div>
+                  <div secondary>In concomitanza con l’uscita del nuovo album “The Pale Emperor” (Cooking Vinyl)...</div>
+                  <small class='data'>
+                    <span>17/06/2015</span>
+                    <span>19:00</span>
+                  </small>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+          <paper-item class='eventi-item-composed'>
+              <paper-item-body two-line class='container'>
+                <a data-router='friends' href='/friends' class='a-no-style'>
+                  <img src='/images/e3.jpg' />
+                  <div class='item-title'>MEG BLUEZ BAND</div>
+                  <div secondary>La passione per la musica, i colori e le atmosfere tipiche del blues...</div>
+                  <small class='data'>
+                    <span>19/06/2015</span>
+                    <span>23:00</span>
+                  </small>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+        </paper-material>
+      </div>
 
       <div>
-        <p>Hello</p>
-        <paper-material elevation="1">
+        <paper-material elevation="1" style='padding: 20px;'>
           <paper-input label="Posizione"></paper-input>
+          <paper-input label="Data"></paper-input>
+          <paper-input label="Ora"></paper-input>
+
+          <div style='text-align: center;'>
+            <a href='/friends' class='a-no-style'>
+              <paper-button class='jack'raised>NEXT</paper-button>
+            </a>
+          </div>
+
         </paper-material>
       </div>
 

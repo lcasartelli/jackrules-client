@@ -117,7 +117,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div class="">
 
             <a data-route="create" href="/create">
-              <paper-fab icon="add"></paper-fab>
+              <paper-fab src="http://10.1.8.30:3000/images/j.png"></paper-fab>
             </a>
 
           </div>
@@ -132,25 +132,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       <div data-route="friends">
 
-          <!-- Main Content -->
-          <div>
+          <div style='padding-top: 20px'>
 
-            <paper-material elevation="1">
+            <p style='text-align: center; color: #fff;'>Scegli gli amici e manda un JACK</p>
+
+            <paper-material elevation="1" style='margin-top: 20px'>
+
               <paper-item>
                 <paper-checkbox>
-                <paper-item-body two-line>
-                    <div>Amici Università</div>
-                    <div secondary>Your status is visible to everyone</div>
-                </paper-item-body>
+                  <div>Amici Università</div>
               </paper-checkbox>
                 <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
               <paper-item>
                 <paper-checkbox>
-                  <paper-item-body two-line>
-                      <div>Colleghi</div>
-                      <div secondary>Your status is visible to everyone</div>
-                  </paper-item-body>
+                    <div>Colleghi</div>
                 </paper-checkbox>
                 <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
@@ -219,8 +215,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <h2>Condividi la tua esperienza Jack!</h2>
           <textarea id="shareTextarea" rows="4"></textarea>
           <a href='/' class='a-no-style'>
-            <div class="buttons" style='text-align:right'>
-              <paper-button dialog-confirm>Pubblica!</paper-button>
+            <div class="buttons" style='text-align:right; padding-top: 20px;'>
+              <paper-button>Più tardi</paper-button>
+              <paper-button>Pubblica!</paper-button>
             </div>
           </a>
 
