@@ -46,6 +46,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
+  <script src="http://localhost:8080/socket.io.min.js"></script>
+
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
@@ -114,27 +116,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div>
 
             <paper-material elevation="1">
-              <paper-item onclick="document.querySelector('#toast').show()">
+              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
                 <paper-item-body two-line>
                     <div>Amici Università</div>
                     <div secondary>Your status is visible to everyone</div>
                 </paper-item-body>
                 <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
-              <paper-item onclick="document.querySelector('#toast').show()">
+              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
                 <paper-item-body two-line>
                     <div>Colleghi</div>
                     <div secondary>Your status is visible to everyone</div>
                 </paper-item-body>
                 <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
-              <paper-item onclick="document.querySelector('#toast').show()">
+              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
 
                     <div>Simone Lusenti</div>
 
                   <!-- <paper-ripple animating></paper-ripple> -->
               </paper-item>
-              <paper-item onclick="document.querySelector('#toast').show()">
+              <paper-item onclick="document.querySelector('#toast').show(); window.mySocket.emit('addEvent', { data: 'hello' });">
 
                     <div>Emanuele Brivio</div>
 
@@ -180,6 +182,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </iron-pages>
 
       <paper-toast id="toast" text="Jack inviato!" role="status" touch-action="none"></paper-toast>
+
+      <paper-dialog
+        id='new-event-alert'
+        entry-animation="scale-up-animation"
+        exit-animation="fade-out-animation">
+
+        <h2>Nuovo invito</h2>
+        <p>Emanuele ti ha invitato a salcazzo</p>
+
+        <div class="buttons">
+          <paper-button dialog-confirm>Parteciperò</paper-button>
+        </div>
+
+      </paper-dialog>
+
 
     </paper-header-panel>
 
