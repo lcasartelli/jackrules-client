@@ -9,7 +9,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <script src="../bower_components/page/page.js"></script>
+
 <script>
+
   window.addEventListener('WebComponentsReady', function() {
 
     // We use Page.js for routing. This is a Micro
@@ -23,10 +25,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.route = 'create';
     });
 
+    page('/friends', function () {
+      app.route = 'friends';
+    });
+
+    page('/jack-rules', function () {
+      app.route = 'jack-rules';
+    });
+
     // add #! before urls
     page({
       hashbang: true
     });
+
+
+
 
   });
 </script>

@@ -68,9 +68,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-icon-button icon="search"></paper-icon-button> -->
 
         <!-- Application name -->
-
-          <div class="middle paper-font-display2 app-name">
-            <a data-route="create" href="/">Jack Daniel's</a>
+          <div class="middle">
+            <a href='/' data-router='home' class='title a-no-style paper-font-display2 app-name'>
+              <img src='/images/logo.png' style='width: 150px' />
+            </a>
           </div>
       </paper-toolbar>
 
@@ -82,7 +83,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <div class='jd-exp'>
 
             <paper-button raised>
-              Attiva Jack Rules
+              <a href='/jack-rules' class='a-no-style'>Attiva Jack Rules</a>
             </paper-button>
 
           </div>
@@ -98,24 +99,88 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </a>
 
           </div>
-        </paper-header-panel>
+
       </div>
 
 
       <div data-route="create">
+        <my-eventi></my-eventi>
+      </div>
 
-        <paper-tabs selected="0">
-          <paper-tab>Eventi Jack Daniel's</paper-tab>
-          <paper-tab>Eventi privati</paper-tab>
-        </paper-tabs>
+
+      <div data-route="friends">
 
           <!-- Main Content -->
+          <div>
 
-          <div>Hello world</div>
-        </paper-header-panel>
+            <paper-material elevation="1">
+              <paper-item onclick="document.querySelector('#toast').show()">
+                <paper-item-body two-line>
+                    <div>Amici Università</div>
+                    <div secondary>Your status is visible to everyone</div>
+                </paper-item-body>
+                <!-- <paper-ripple animating></paper-ripple> -->
+              </paper-item>
+              <paper-item onclick="document.querySelector('#toast').show()">
+                <paper-item-body two-line>
+                    <div>Colleghi</div>
+                    <div secondary>Your status is visible to everyone</div>
+                </paper-item-body>
+                <!-- <paper-ripple animating></paper-ripple> -->
+              </paper-item>
+              <paper-item onclick="document.querySelector('#toast').show()">
+
+                    <div>Simone Lusenti</div>
+
+                  <!-- <paper-ripple animating></paper-ripple> -->
+              </paper-item>
+              <paper-item onclick="document.querySelector('#toast').show()">
+
+                    <div>Emanuele Brivio</div>
+
+                  <!-- <paper-ripple animating></paper-ripple> -->
+              </paper-item>
+
+
+
+            </paper-material>
+
+          </div>
+      </div>
+
+
+      <div data-route="jack-rules" class='rules-page'>
+
+        <img src='/images/JD_20620_ip5.png' class='bottles'/>
+
+
+        <paper-dialog
+          id='dialog'
+          entry-animation="scale-up-animation"
+          exit-animation="fade-out-animation">
+
+          <h2>Attenzione</h2>
+          <p>Il tuo cellulare verrà messo in silezioso</p>
+
+          <div class="buttons">
+            <paper-button dialog-confirm>Yeah!</paper-button>
+          </div>
+
+        </paper-dialog>
+
+        <script>
+          setTimeout(function () {
+            document.querySelector('#dialog').open(function () {});
+          }, 2000);
+
+        </script>
+
       </div>
 
       </iron-pages>
+
+      <paper-toast id="toast" text="Jack inviato!" role="status" touch-action="none"></paper-toast>
+
     </paper-header-panel>
 
 
@@ -123,9 +188,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   </template>
 
-  <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
-  <!-- endbuild-->
+
 </body>
 
 </html>

@@ -1,0 +1,81 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="my-eventi">
+  <style>
+
+  </style>
+  <template>
+
+    <paper-tabs selected="{{eventSelected}}">
+      <paper-tab>Eventi Jack Daniel's</paper-tab>
+      <paper-tab>Eventi privati</paper-tab>
+    </paper-tabs>
+
+    <iron-pages selected="{{eventSelected}}">
+      <div>
+        <paper-material elevation="1">
+          <paper-item>
+              <paper-item-body two-line>
+                <a data-router='friends' href='/friends' class='a-no-style'>
+                  <div>Yo motherfucker!</div>
+                  <div secondary>Your status is visible to everyone</div>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+          <paper-item>
+              <paper-item-body two-line>
+                <a data-router='friends' href='/friends' class='a-no-style'>
+                  <div>Yo motherfucker!</div>
+                  <div secondary>Your status is visible to everyone</div>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+          <paper-item>
+              <paper-item-body two-line>
+                <a data-router='friends' href='/friends' class='a-no-style'>
+                  <div>Yo motherfucker!</div>
+                  <div secondary>Your status is visible to everyone</div>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+          <paper-item>
+              <paper-item-body two-line>
+                <a data-router='friends' href='/friends' class='a-no-style'>
+                  <div>Yo motherfucker!</div>
+                  <div secondary>Your status is visible to everyone</div>
+                </a>
+              </paper-item-body>
+              <!-- <paper-ripple animating></paper-ripple> -->
+          </paper-item>
+        </paper-material>
+
+      </div>
+      <div>Heidi top poser</div>
+
+    </iron-pages>
+
+  </template>
+
+<script>
+  (function () {
+    Polymer({
+      is: "my-eventi",
+      ready: function () {
+        this.eventSelected = 0;
+      }
+    });
+  })();
+</script>
+
+</dom-module>
