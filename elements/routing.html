@@ -29,6 +29,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app.route = 'friends';
     });
 
+    page('/friends/:title', function (context) {
+      // /^/context.pathname
+      console.log(context.params.title);
+      app.route = 'friends';
+      app.eventTitle = context.params.title;
+
+    });
+
     page('/jack-rules', function () {
       app.route = 'jack-rules';
     });
