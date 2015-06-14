@@ -46,7 +46,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
-  <script src="http://localhost:8080/socket.io.min.js"></script>
+  <script src="http://10.1.8.30:8080/socket.io.min.js"></script>
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
@@ -72,7 +72,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- Application name -->
           <div id="containerImgTop" class="middle">
             <a href='/' data-router='home' class='title a-no-style paper-font-display2 app-name'>
-              <img src='/images/logo.png' style='width: 180px' />
+              <img src='http://10.1.8.30:3000/images/logo.png' style='width: 180px' />
             </a>
           </div>
       </paper-toolbar>
@@ -169,7 +169,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <div style='text-align: center;'>
               <a href='/' class='a-no-style'>
-                <paper-button class='jack' onclick="window.mySocket.emit('addEvent', { data: 'hello' });" raised>JACK!</paper-button>
+                <paper-button class='jack' onclick="window.mySocket.emit('addEvent', { data: 'Sei stato invitato a H-ACK Beverage' });" raised>JACK!</paper-button>
               </a>
             </div>
 
@@ -185,7 +185,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </paper-button>
 
         </div>
-        <img src='/images/JD_20620_ip5.png' class='bottles'/>
+        <img src='http://10.1.8.30:3000/images/JD_20620_ip5.png' class='bottles'/>
 
 
         <div
@@ -204,6 +204,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
 
         <script>
+
           setTimeout(function () {
             // document.querySelector('#dialog').open(function () {});
           }, 2000);
@@ -224,13 +225,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </a>
 
         </div>
-        <img src='/images/JD_20620_ip5.png' class='bottles'/>
+        <img src='http://10.1.8.30:3000/images/JD_20620_ip5.png' class='bottles'/>
 
       </div>
 
       </iron-pages>
 
-      <paper-toast id="toast" text="Jack inviato!" role="status" touch-action="none"></paper-toast>
+      <paper-toast id="toast" text="JACK inviato!" role="status" touch-action="none"></paper-toast>
 
       <paper-dialog
         id='new-event-alert'
@@ -238,9 +239,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         exit-animation="fade-out-animation">
 
         <h2>Nuovo invito</h2>
-        <p>Emanuele ti ha invitato a salcazzo</p>
+        <p id='dialog-message'></p>
 
         <div class="buttons">
+          <paper-button dialog-dismiss>Non parteciperò</paper-button>
           <paper-button dialog-confirm>Parteciperò</paper-button>
         </div>
 
