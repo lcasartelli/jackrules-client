@@ -28,9 +28,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // See https://github.com/Polymer/polymer/issues/1381
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
-
+  
     var socket = io('http://10.1.8.30:8080');
-    socket.emit('addEvent', { data: 'new event!' });
+    // socket.emit('addEvent', { data: 'new event!' });
+
     socket.on('addEvent', function (data) {
       console.log(data);
       var alert = document.querySelector('#new-event-alert');
